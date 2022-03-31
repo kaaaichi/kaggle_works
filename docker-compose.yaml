@@ -1,0 +1,12 @@
+version: '3'
+services:
+  work_jupyter:
+    image: jupyter/scipy-notebook:ubuntu-20.04
+    ports: 
+      - 8888:8888
+    container_name: work_jupyter_container
+    restart: always
+    volumes: 
+      - ".:/work"
+    tty: true
+
